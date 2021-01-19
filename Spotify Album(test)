@@ -1,0 +1,17 @@
+Extract Artist's uri
+artist_uri = ['tracks']['items'][0]['artists'][0]['uri']
+#Pull all of the artist's albums
+sp_albums = sp.artist_albums(ARIST_uri, album_type='album')
+#Store artist's albums' names' and uris in separate lists
+album_names = []
+album_uris = []
+for i in range(len(sp_albums['items'])):
+  album_names.append(sp_albums['items'][i]['name'])
+  album_uris.append(sp_albums['items'][i]['uri'])
+album_names
+album_uris
+#Keep names and uris in same order to keep track of duplicate albums
+#'spotify': 'SPOTIFY ARTIST PAGE LINK'},
+#'href': 'SPOTIFY API',
+#'id': 'ID', 'name': 'ARTIST NAME', 'type': 'artist',
+#'uri': 'SPOTIFY URI'}]
